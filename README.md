@@ -33,8 +33,8 @@ Please use it for further development!
 
 ### Adjustment suggestions
 * Adjustment suggestions by pull requests on https://git.studer-raimann.ch/ILIAS/Plugins/BexioCurl/tree/develop
-* Adjustment suggestions which are not yet worked out in detail by Bexio tasks under https://bexio.studer-raimann.ch/projects/LBEXIOCURL
-* Bug reports under https://bexio.studer-raimann.ch/projects/LBEXIOCURL
+* Adjustment suggestions which are not yet worked out in detail by Bexio tasks under https://jira.studer-raimann.ch/projects/LBEXIOCURL
+* Bug reports under https://jira.studer-raimann.ch/projects/LBEXIOCURL
 * For external users please send an email to support-custom1@studer-raimann.ch
 
 ### Development
