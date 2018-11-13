@@ -19,7 +19,7 @@ class BexioCurl {
 	/**
 	 *
 	 *
-	 * BexioCurl constructor.
+	 * BexioCurl constructor
 	 */
 	public function __construct() {
 	}
