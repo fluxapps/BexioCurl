@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.1.3]
+- srag/librariesnamespacechanger
+
 ## [0.1.2]
 - Remove dot from constructor phpdoc
 - Fix libraries path
