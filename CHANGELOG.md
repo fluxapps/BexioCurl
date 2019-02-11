@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.0]
+- Add basic GET and POST functionality
+
 ## [0.1.3]
 - srag/librariesnamespacechanger
 
