@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.1]
+- Adjust faulty comment
+
 ## [1.0.0]
 - Add basic GET and POST functionality
 
