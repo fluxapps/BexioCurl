@@ -51,7 +51,7 @@ class BexioCurl {
 	 * Create a POST request using JSON data
 	 *
 	 * @param $suffix string String at the end of request (e.g. "/account/1")
-	 * @param $data   mixed JSON encoded array with keys. (e.g. json_encode(array("name" => "Hagrid", "age" => "36")) )
+	 * @param $data   mixed JSON encoded array with keys. (e.g. json_encode(array(array("field" => "account_no", "value" => "3600"))) )
 	 *
 	 * @return array
 	 */
