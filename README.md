@@ -30,13 +30,3 @@ Please use it for further development!
 * Adjustment suggestions which are not yet worked out in detail by Bexio tasks under https://jira.studer-raimann.ch/projects/LBEXIOCURL
 * Bug reports under https://jira.studer-raimann.ch/projects/LBEXIOCURL
 * For external users you can report it at https://plugins.studer-raimann.ch/goto.php?target=uihk_srsu_LBEXIOCURL
-
-### Development
-If you want development in this library you should install this library like follow:
-
-Start at your ILIAS root directory
-```bash
-mkdir -p Customizing/global/libraries
-cd Customizing/global/libraries
-git clone -b develop git@git.studer-raimann.ch:ILIAS/Plugins/BexioCurl.git BexioCurl
-```
