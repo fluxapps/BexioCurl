@@ -2,6 +2,7 @@
 
 namespace srag\BexioCurl;
 
+use ILIAS\BackgroundTasks\Exceptions\InvalidArgumentException;
 use srag\DIC\DICTrait;
 
 /**
@@ -54,13 +55,20 @@ class BexioCurl {
 	 * @param $data   mixed JSON encoded array with keys. (e.g. json_encode(array(array("field" => "account_no", "value" => "3600"))) )
 	 *
 	 * @return array
+	 * @throws InvalidArgumentException
 	 */
 	public function postRequest($suffix, $data) {
 		$ch = $this->prepareRequest($suffix);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, self::METHOD_POST);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
-		return json_decode(curl_exec($ch));
+		$result = json_decode(curl_exec($ch));
+
+		if (!is_array($result)) {
+			throw new InvalidArgumentException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
+		}
+
+		return $result;
 	}
 
 
@@ -70,12 +78,19 @@ class BexioCurl {
 	 * @param $suffix string String at the end of request (e.g. "/account")
 	 *
 	 * @return array
+	 * @throws InvalidArgumentException
 	 */
 	public function getRequest($suffix) {
 		$ch = $this->prepareRequest($suffix);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, self::METHOD_GET);
 
-		return json_decode(curl_exec($ch));
+		$result = json_decode(curl_exec($ch));
+
+		if (!is_array($result)) {
+			throw new InvalidArgumentException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
+		}
+
+		return $result;
 	}
 
 

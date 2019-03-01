@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.0]
+- Implement exception handling
+
 ## [1.0.1]
 - Adjust faulty comment
 
