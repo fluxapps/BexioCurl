@@ -55,6 +55,7 @@ class BexioCurl {
 	 * @param $data   mixed JSON encoded array with keys. (e.g. json_encode(array(array("field" => "account_no", "value" => "3600"))) )
 	 *
 	 * @return array
+	 * @throws InvalidArgumentException
 	 */
 	public function postRequest($suffix, $data) {
 		$ch = $this->prepareRequest($suffix);
@@ -63,7 +64,7 @@ class BexioCurl {
 
 		$result = json_decode(curl_exec($ch));
 
-		if (property_exists($result, "error_code")) {
+		if (!is_array($result)) {
 			throw new InvalidArgumentException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
 		}
 
@@ -77,6 +78,7 @@ class BexioCurl {
 	 * @param $suffix string String at the end of request (e.g. "/account")
 	 *
 	 * @return array
+	 * @throws InvalidArgumentException
 	 */
 	public function getRequest($suffix) {
 		$ch = $this->prepareRequest($suffix);
@@ -84,7 +86,7 @@ class BexioCurl {
 
 		$result = json_decode(curl_exec($ch));
 
-		if (property_exists($result, "error_code")) {
+		if (!is_array($result)) {
 			throw new InvalidArgumentException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
 		}
 
