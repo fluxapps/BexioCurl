@@ -2,6 +2,7 @@
 
 namespace srag\BexioCurl;
 
+use ILIAS\BackgroundTasks\Exceptions\InvalidArgumentException;
 use srag\DIC\DICTrait;
 
 /**
@@ -60,7 +61,13 @@ class BexioCurl {
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, self::METHOD_POST);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
-		return json_decode(curl_exec($ch));
+		$result = json_decode(curl_exec($ch));
+
+		if (property_exists($result, "error_code")) {
+			throw new InvalidArgumentException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
+		}
+
+		return $result;
 	}
 
 
@@ -75,7 +82,13 @@ class BexioCurl {
 		$ch = $this->prepareRequest($suffix);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, self::METHOD_GET);
 
-		return json_decode(curl_exec($ch));
+		$result = json_decode(curl_exec($ch));
+
+		if (property_exists($result, "error_code")) {
+			throw new InvalidArgumentException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
+		}
+
+		return $result;
 	}
 
 
