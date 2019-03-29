@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.1]
+- Improve exception handling
+
 ## [1.1.0]
 - Implement exception handling
 
