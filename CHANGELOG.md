@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.1]
+- Resolve version problems
+
 ## [1.2.0]
 - Fix namespaces
 
