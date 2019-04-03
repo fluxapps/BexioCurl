@@ -6,6 +6,10 @@
  * Time: 10:17
  */
 
+namespace srag\BexioCurl\Exception;
+
+use ilException;
+
 class BexioCurlException extends ilException {
 
 	public function __construct($a_message, $a_code = 0) {

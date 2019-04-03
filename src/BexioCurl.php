@@ -2,7 +2,7 @@
 
 namespace srag\BexioCurl;
 
-use BexioCurlException;
+use srag\BexioCurl\Exception\BexioCurlException;
 use srag\DIC\DICTrait;
 
 /**
