@@ -64,7 +64,7 @@ class BexioCurl {
 
 		$result = json_decode(curl_exec($ch));
 
-		if (!is_array($result)) {
+		if ($result->error_code != NULL) {
 			throw new BexioCurlException("Invalid Bexio API access data or server maintenance. Check the access data values in the plugin configuration.");
 		}
 
