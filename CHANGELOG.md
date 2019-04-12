@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.3]
+- Valid response fix
+
 ## [1.2.2]
 - Fix valid response detected as failure
 
