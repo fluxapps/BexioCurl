@@ -18,12 +18,8 @@ Tip: Because of multiple autoloaders of plugins, it could be, that different ver
 
 So I recommand to use [srag/librariesnamespacechanger](https://packagist.org/packages/srag/librariesnamespacechanger) in your plugin.
 
-### Dependencies
+### Requirements
 * PHP >=7.0
-* [composer](https://getcomposer.org)
-* [srag/dic](https://packagist.org/packages/srag/dic)
-
-Please use it for further development!
 
 ### Adjustment suggestions
 * Adjustment suggestions by pull requests
